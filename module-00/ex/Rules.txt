@@ -3,7 +3,6 @@ Vector and Struct (not Classes)
 Make an Account Class
 - private int money
 - private unique int id
-- private ref of the Bank ?
 - can't exist without a bank
 
 

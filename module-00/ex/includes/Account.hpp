@@ -1,27 +1,19 @@
 #pragma once
 
 #include "header.hpp"
+#include "Bank.hpp"
 
-class Account
+struct Account
 {
-	private:
-		int	_id;
-		int	_value;
-	
-	public:
-		Account();
-		~Account();
+    public:
+        Account(unsigned int id);
+        ~Account(void);
+        
+        void sendMoney(Bank bank, unsigned int accountId, unsigned int amount);
 
-		void	setValue(int valueToSet);
-		void	addValue(int valudeToAdd);
-		void	subValue(int valudeToSub);
-
-		int		getValue(void) const;
-		int		getId(void) const;
-
-	friend std::ostream& operator << (std::ostream& p_os, const Account& p_account)
-	{
-		p_os << "[" << p_account._id << "] - [" << p_account._value << "]";
-		return (p_os);
-	}
+        unsigned int getAccountId(void) const;
+    protected:
+    private:
+        unsigned int _id;
+        int _money;
 };
