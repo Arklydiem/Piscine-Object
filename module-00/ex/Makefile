@@ -31,7 +31,7 @@ OBJS		=	$(SRCS_PATH:.cpp=.o)
 # *** # Compilation # ******************************************************** #
 
 %.o: %.cpp
-	$(CC) $(FLAGS) -c $< -o $@ 
+	$(CC) $(FLAGS) -c	 $< -o $@ 
 
 all: $(NAME)
 
