@@ -34,8 +34,6 @@ void Bank::deleteAccount(unsigned int accountId){
         }
         iterator++;
     }
-
-    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
 }
 
 Account* Bank::getClientAccount(unsigned int accountId){
