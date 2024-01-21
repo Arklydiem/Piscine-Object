@@ -1,0 +1,52 @@
+Vector and Struct (not Classes)
+
+Make an Account Class
+- private int money
+- private unique int id
+- can't exist without a bank
+
+
+Make a Bank Class
+- private int liquidity
+- vector of Accounts
+- can create an Account
+- can delete an Account
+- can manage an Account
+
+
+		void account.send(Bank, account Id, money){
+			if (_money < money)
+				"NOPE"
+			returnValue = Bank.creditAccount(id, money);
+			if (returnValue == 1){
+				"Successfuly tranfered money"
+				_money -= money;
+			}
+			else {
+				"Account does not exist"
+			}		
+		}
+		int creditAccount(account id, money){
+			int BankTax = money * 0.05;
+			liquidity += BankTax;
+			account = this.getAccountById(account id)
+			if account == NULL
+				return 0;
+			account.addMoney(money - BankTax);
+			return 1;
+		}
+
+Subject rules :
+You must meet at least the following requirements:
+• The bank must receive 5% of each money inflow on these client accounts
+• The accounts must never have two identical IDs
+• The attributes of the structures must not be modifiable from the outside
+• The bank must be able to create, delete and modify the accounts of these customers
+• The bank must be able to give a loan to a customer, within the limits of its funds
+• It must be impossible to add money to a client account without going through the
+bank
+• If it makes sense, the creation of a Getter and a Setter is mandatory. Getter(s) by
+copy will not be accepted
+• If it makes sense, the creation of a const Getter is mandatory. const Getter(s) by
+copy will not be accepted
+During the evaluation, each choice made during this exercise must be defended.
